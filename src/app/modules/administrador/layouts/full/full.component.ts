@@ -1,19 +1,6 @@
-import * as $ from 'jquery';
 import {MediaMatcher} from '@angular/cdk/layout';
-import {Router} from '@angular/router';
-import {
-  ChangeDetectorRef,
-  Component,
-  NgZone,
-  OnDestroy,
-  ViewChild,
-  HostListener,
-  Directive,
-  AfterViewInit
-} from '@angular/core';
-import {MenuItems} from '../config/menu-items/menu-items';
-import {AppHeaderComponent} from './header/header.component';
-import {AppSidebarComponent} from './sidebar/sidebar.component';
+import {AfterViewInit, ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
+import {MenuItems} from '../../menu-items';
 
 /** @title Responsive sidenav */
 @Component({

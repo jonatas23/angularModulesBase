@@ -1,6 +1,6 @@
 import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
 import {MediaMatcher} from '@angular/cdk/layout';
-import {MenuItems} from '../../config/menu-items/menu-items';
+import {MenuItems} from '../../../menu-items';
 
 @Component({
   selector: 'app-sidebar',

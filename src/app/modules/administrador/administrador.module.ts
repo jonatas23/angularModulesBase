@@ -15,6 +15,7 @@ import {CdkTableModule} from '@angular/cdk/table';
 import {AuthGuard} from '../../service/auth/auth.guard';
 import {HttpClientModule} from '@angular/common/http';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {MenuItems} from './menu-items';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,9 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     DemoMaterialModule,
     SharedModule
   ],
-  providers: [AuthGuard,
+  providers: [
+    AuthGuard,
+    MenuItems,
     {provide: LocationStrategy, useClass: PathLocationStrategy}
   ]
 })
