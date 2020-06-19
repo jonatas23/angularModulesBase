@@ -1,1 +1,18 @@
-<p>home-administrador works!</p>
+<div fxLayout="row">
+  <div fxFlex.gt-sm="100%" >
+    <mat-card>
+      <mat-card-content>
+        <mat-card-title>Lista de Personais</mat-card-title>
+        <mat-card-subtitle>Lista com personais cadastrados.</mat-card-subtitle>
+        <mat-list>
+          <mat-list-item *ngFor="let p of personals">
+            <img mat-list-avatar [src]="p.image" alt="Image of {{p.nomePersonal}}">
+            <h3 matLine>{{p.nomePersonal}}</h3>
+            <p matLine class="text-muted">{{p.cpf}}</p>
+          </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
