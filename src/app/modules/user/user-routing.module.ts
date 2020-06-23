@@ -2,13 +2,12 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {UserComponent} from './user.component';
 import {HomeUserComponent} from './home-user/home-user.component';
-
-const prefix:string = 'user/';
+import {prefixUser} from '../../variable';
 
 const routes: Routes = [{
   path: '', component: UserComponent, children: [
-    {path: '', redirectTo: '/' + prefix + 'home', pathMatch: 'full'},
-    {path: prefix + 'home', component: HomeUserComponent},
+    {path: '', redirectTo: '/' + prefixUser + 'home', pathMatch: 'full'},
+    {path: prefixUser + 'home', component: HomeUserComponent},
   ]
 }];
 @NgModule({

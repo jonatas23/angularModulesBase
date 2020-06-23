@@ -1,4 +1,3 @@
-
 <mat-nav-list appAccordion>
     <mat-list-item appAccordionLink *ngFor="let menuitem of menuItems.getMenuitem()" routerLinkActive="active" group="{{menuitem.state}}">
         <a class="" appAccordionToggle routerLink="/{{menuitem.state }}" *ngIf="menuitem.type === 'link'">

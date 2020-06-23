@@ -1,0 +1,48 @@
+<div class="main-container">
+  <mat-toolbar class="topbar telative">
+    <div class="navbar-header">
+      <a class="navbar-brand">
+        <b>
+          <img src="assets/images/logo-light-icon.png" alt="homepage" class="light-logo">
+        </b>
+        <h4>P. Virtual</h4>
+      </a>
+    </div>
+
+    <button mat-icon-button (click)="mobileQuery.matches ? isExpanded = !isExpanded : drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="space"></span>
+    <app-sidebar></app-sidebar>
+  </mat-toolbar>
+
+  <mat-drawer-container class="example-container mat-typography" autosize>
+    <mat-drawer #drawer mode="side" [mode]="mobileQuery.matches ? 'side' : 'over'"
+                fixedTopGap="0" [opened]="mobileQuery.matches" [disableClose]="mobileQuery.matches">
+      <mat-nav-list>
+        <mat-list-item>
+          <mat-icon mat-list-icon>person</mat-icon>
+          <h4 mat-line *ngIf="isExpanded">Management A</h4>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon mat-list-icon>assignment</mat-icon>
+          <h4 mat-line *ngIf="isExpanded">Management B</h4>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon mat-list-icon>domain</mat-icon>
+          <h4 mat-line *ngIf="isExpanded">Management C</h4>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon mat-list-icon>folder_shared</mat-icon>
+          <h4 mat-line *ngIf="isExpanded">Management X</h4>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-drawer>
+
+    <mat-drawer-content class="page-wrapper">
+      <div class="page-content">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>
