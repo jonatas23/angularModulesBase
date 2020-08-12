@@ -13,7 +13,6 @@ import {AuthGuard} from './service/auth/auth.guard';
 import {LocationStrategy, PathLocationStrategy} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-import {FlexLayoutModule} from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -25,7 +24,6 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     BrowserAnimationsModule,
     DemoMaterialModule,
     FormsModule,
-    FlexLayoutModule,
     HttpClientModule,
     AdministradorModule,
     ProfissionalModule,

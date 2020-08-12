@@ -14,7 +14,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CdkTableModule} from '@angular/cdk/table';
 import {AuthGuard} from '../../service/auth/auth.guard';
 import {HttpClientModule} from '@angular/common/http';
-import {FlexLayoutModule} from '@angular/flex-layout';
 import {MenuItems} from './menu-items';
 
 @NgModule({
@@ -33,7 +32,6 @@ import {MenuItems} from './menu-items';
     FormsModule,
     ReactiveFormsModule,
     CdkTableModule,
-    FlexLayoutModule,
     HttpClientModule,
     DemoMaterialModule,
     SharedModule
